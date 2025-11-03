@@ -9,4 +9,6 @@ edition = "2024"
 members = [
     "start1/hello_world",
     "start1/variables",
+    "start1/authentication",
+    "start1/login"
 ]
