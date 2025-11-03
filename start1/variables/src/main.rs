@@ -26,6 +26,12 @@ fn greet_borrow_mut(s:&mut String){
     *s=format!("Dello this is  {s}");
 }
 
+fn read_line()->String{
+    let mut input:String=String::new();
+    std::io::stdin().read_line(&mut input).expect("Std not working");
+    input.trim().to_string()
+}
+
 fn main() {
     let n:i32=5;
 
@@ -80,7 +86,12 @@ fn main() {
     greet_borrow_mut(&mut name_new_ver);
     println!("{name_new_ver}");
     greet_borrow_mut(&mut name_new_ver);
-    println!("{name_new_ver}")
+    println!("{name_new_ver}");
+    // read line
+    let input:String=read_line();
+    println!("You typed: [{input}]");
+    // You typed: [my name is antony]
+
 
 }
  
