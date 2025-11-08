@@ -28,6 +28,12 @@ pub fn read_line()->String{
     input.trim().to_string()
 }
 
+pub enum LoginAction{
+    Admin,
+    User,
+    Denied
+}
+
 #[cfg(test)]
 
 mod tests{
