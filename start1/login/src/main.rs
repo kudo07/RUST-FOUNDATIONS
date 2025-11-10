@@ -1,6 +1,12 @@
-use authentication::{greet_user,login,read_line, LoginAction};
+use authentication::{find_even, greet_user, login, read_line, LoginAction};
 // authentication is the library work here
 fn main() {
+    let numbers=vec![1,2,3,4,5];
+    let result=find_even(&numbers);
+    match result{
+        Some(value)=>println!("Found even numver"),
+        None=>println!("No even number found"),
+    }
     // println!("{}",greet_user("Mosely"));
     let mut tries=0;
 

@@ -13,6 +13,8 @@
 //     }
 // }
 
+use std::num;
+
 pub fn greet_user(name:&str)->String{
     format!("Hello {name}")
 }
@@ -28,6 +30,7 @@ pub enum LoginAction{
     Granted(LoginRole),
     Denied
 }
+
 
 #[derive(PartialEq,Eq,Debug)]
 pub enum LoginRole{
@@ -57,7 +60,14 @@ pub fn read_line()->String{
     input.trim().to_string()
 }
 
-
+pub fn find_even(nums:&[i32])-> Option<i32>{
+    for &num in nums{
+        if num%2==0{
+            return Some(num)
+        }
+    }
+    None
+}
 
 #[cfg(test)]
 
